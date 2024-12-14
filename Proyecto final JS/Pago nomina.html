@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOMINA</title>
+    <link rel="stylesheet" href="./css/nomina.css">
+    <link rel="stylesheet" href="./css/style.css">
+    
+</head>
+<body>
+    <header class="top-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-5 header-logo">
+					<br>
+					<a href="index.html"><img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2020/01/ps-logo.jpg?tf=3840x"" class="img-responsive logo " width="25%" height="50%" ></a>
+				</div>
+
+				<div class="col-md-7">
+					<nav class="navbar navbar-default">
+					  <div class="container-fluid nav-bar">
+					   
+					    <div class="navbar-header">
+					      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					        <span class="sr-only">Toggle navigation</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					      </button>
+					    </div>
+
+					    
+					    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					      
+                            <ul class="nav navbar-nav navbar-right">
+                              <li><a class="menu" href="./Inicio sesion.html">Inicio Sesion</a></li>
+                              <li><a class="menu active" href="index.html" >INICIO</a></li>
+                              <li><a class="menu" href="nosotros.html">NOSOTROS</a></li>
+                              <li><a class="menu" href="Tienda.html">TIENDA</a></li>
+                              <li><a class="menu" href="Ventas de Combos.html">COMBOS</a></li>
+                              <li><a class="menu" href="Pago nomina.html">Nomina</a></li>
+                              <li><a class="menu" href="./contacto.html"> CONTACTENOS</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </nav>
+                  </div>
+              </div>
+          </div>
+      </header> 
+    <div id="head">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7EyCEHRs2MYJNQjw6chDDlO_HGiM-jUIZEQ&s" alt="" width="100" height="100">
+        <h1 style="text-align: center;">SIMULADOR DE LIQUIDACION DE NOMINA</h1>
+    </div>
+    <form action="" id="nomina">
+        <fieldset id="fieldset1" style="border-color: blueviolet;">
+            <table id="table1">
+                <legend>DATOS PERSONALES</legend>
+                    <tr><th>Nombre:</th><td><input type="text" size="40" max="20" placeholder="Ingrese nombre empleado" name="nombre"></td></tr>
+                    <tr><th>Apellido:</th><td><input type="text" size="40" max="20" placeholder="Ingrese Apellido empleado" name="apellido"></td></tr>
+                    <tr><th>Cargo:</th><td><input type="text" size="40" max="20" placeholder="Ingrese Cargo empleado" name="cargo"></td></tr>
+                    <tr><th>Documento Id.</th><td><input type="text" size="40" max="20" placeholder="Ingrese Documento identidad CC" name="Documento"></td></tr>
+                    <tr><th>Salario Mensual $:</th><td><input type="text" name="salario" id="salario" placeholder="Ingrese salario empleado"></td></tr>
+                    <tr><th>Dias laborador</th><td><select name="dias" id="dias">
+                        <option>1<option>2<option>3<option>4<option>5<option>6<option>7<option>8<option>9<option>10<option>11<option>12<option>13<option>14<option>15<option>16<option>17<option>18<option>19<option>20<option>21<option>22<option>23<option>24<option>25<option>26<option>27<option>28<option>29<option>30
+                    </select></td></tr>
+            </table>
+        </fieldset>
+        <fieldset style="border-color: brown;">
+            <table>
+                <legend>Devengados</legend>
+                <tr><th>Básico:</th><td><input type="text" id="basico" name="basico" disabled></td></tr>
+                <tr><th>Subsidio Transporte:</th><td><input type="text" name="Subsidio" id="subsidio" disabled></td></tr>
+                <tr><th>Bonificación:</th><td><input type="text" name="bonif" id="bonif" size="40" max="20"></td></tr>
+                <tr><th colspan="2"><h3>Horas Recargo Nocturno</h3></th></tr>
+                <tr><th>Nro. HRN:</th><td><input type="text" name="hrn" id="hrn" placeholder="Ingrese numero de horas recargo Nocturno"></td></tr>
+                <tr><th>Total Recargos Nocturnos:</th><td><input type="text" name="totalrecn" id="totrecn" size="40" disabled></td></tr>
+                <br>
+                <tr><th>Total Devengado:</th><td><input type="text" name="totaldev" id="totaldev" size="40" disabled></td></tr>
+            </table>
+        </fieldset>
+        <fieldset style="border-color: blue;">
+            <table>
+                <legend>Deducidos</legend>
+                <tr><th>E.P.S:</th><td><input type="text" name="eps" id="eps" size="40" disabled></td></tr>
+                <tr><th>Pensiones:</th><td><input type="text" name="pension" id="pension" size="40" disabled></td></tr>
+                <tr><th>Fondo Solidaridad:</th><td><input type="text" name="fondos" id="fondos" size="40" disabled></td></tr>
+                <tr><th>Préstamos:</th><td><input type="text" name="prestamo" id="prestam" size="40"></td></tr>
+                <br>
+                <tr><th>Total Deducciones:</th><td><input type="text" name="totaldedu" id="totaldedu" size="40" disabled></td></tr>
+            </table>
+        </fieldset>
+        <fieldset style="border-color: red;">
+            <table>
+                <legend>Recibí Conforme</legend>
+                <tr><th>Neto Pagado</th><td><input type="text" name="neto" id="neto" disabled></td></tr>
+            </table>
+        </fieldset>
+        <fieldset style="border-color: chocolate;">
+            <table>
+                <input type="button" value="Liquidar" onclick="liquidar()">
+                <input type="reset" value="Borrar">
+            </table>
+        </fieldset>
+    </form>
+</body>
+<script src="./js/nomina.js"></script>
+<script src="js/gmaps.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
+</html>

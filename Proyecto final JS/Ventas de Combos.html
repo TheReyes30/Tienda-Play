@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO CHEKED</title>
+    <link rel="stylesheet" href="./css/Formulario Avanzado.css">
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    
+    <!-- programa que permita comprar comida rapidas con adicionales   -->
+<center>
+    
+    <a href="./index.html"><img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2018/10/logo-playstation.jpg?tf=3840x" alt="" height="150" width="300" ></a>
+    <h1>FACTURA DE VENTAS</h1>
+    <form action="">
+        <!-- Seccion cabecera de encabezado de factura -->
+        <table><caption>FACTURA PLUSS</caption>
+            <tr><th>Nombre</th><td><input type="text" size="20"></td><th>Tipo Documento</th><th><select name="" id="tp"><option>CC</option><option>CE</option><option>NIT</option></select></th><th>No. Documento</th><td><input type="text" size="25"></td></tr>
+            <tr><th>Direccion</th><td><input type="text" id="dir" size="20"></td><th>Telefono</th><td><input type="text" id="tel" size="20"></td><th>Empleado</th><td><input type="text" id="emp" size="25"></td></tr>
+
+            <!-- Seccion cabecera de detalle de factura -->
+            <tr><th>Referencia</th>
+                <th colspan="2">Descripcion</th><th>Cantidad</th><th>Valor Unitario</th><th>SubTotal</th>
+            </tr>
+            <tr>
+                <th><select id="prod1" onchange="mostrar();">
+                    <option>Seleccionar:</option>
+                    <option value="449944">Combo Plus</option>
+                    <option value="479967">Combo Delux</option>
+                    <option value="2870334">Combo Ultimate</option>
+                </select></th>
+                <th colspan="2"><input type="text" id="desc01" size="40"></th>
+                <th><input type="number" id="cant01" size="10"></th>
+                <th><input type="number" id="vau01" size="15" disabled></th>
+                <th><input type="text" id="vat01" size="15" disabled></th>
+            </tr>
+            <tr>
+                <th><select id="prod2" onchange="mostrar();">
+                    <option>Seleccionar:</option>
+                    <option value="449944">Combo Plus</option>
+                    <option value="479967">Combo Delux</option>
+                    <option value="2870334">Combo Ultimate</option>
+                </select></th>
+                <th colspan="2"><input type="text" id="desc02" size="40"></th>
+                <th><input type="number" id="cant02" size="10"></th>
+                <th><input type="number" id="vau02" size="15" disabled></th>
+                <th><input type="text" id="vat02" size="15" disabled></th>
+            </tr>
+            <tr>
+                <th><select id="prod3" onchange="mostrar();">
+                    <option>Seleccionar:</option>
+                    <option value="449944">Combo Plus</option>
+                    <option value="479967">Combo Delux</option>
+                    <option value="2870334">Combo Ultimate</option>
+                </select></th>
+                <th colspan="2"><input type="text" id="desc03" size="40"></th>
+                <th><input type="number" id="cant03" size="10"></th>
+                <th><input type="number" id="vau03" size="15" disabled></th>
+                <th><input type="text" id="vat03" size="15" disabled></th>
+            </tr>
+            <tr><th colspan="6">ADICIONALES</th></tr>
+            <tr><th colspan="2" rowspan="2"><img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2022/08/dualsense-edge-2793067.jpg" alt="">
+            <input type="checkbox" name="adic" id="checkbox1">Mando DualSense Edge Play Station $1.069.900</th>
+            <th colspan="2" rowspan="2"><img src="https://juegosdigitalescolombia.com/files/images/productos/1695156121-psn-plus-extra-12-meses-cuenta-principal-ps4-0.jpg" alt="">
+            <input type="checkbox" name="adic" id="checkbox2">Suscripcion Extra $219.900</th></tr>
+            <th colspan="2" rowspan="2"><img src="https://i.blogs.es/ac6a7d/estacion-de-carga/1024_2000.jpg" alt="">
+            <input type="checkbox" name="adic" id="checkbox3">Estación de recarga DualSense $88.900</th></tr>
+            <!-- Seccion liquidacion de factura -->
+            <tr></tr>
+            <tr><th colspan="4">TOTAL ADICIONALES </th>
+            <th colspan="2"><input type="number"  id="adic0" disabled></th></tr>
+            <tr>
+            <th colspan="2">Forma de Pago</th>
+            <th colspan="2"><input type="radio" name="fp" id="radio1">Efectivo <br>
+                <input type="radio" name="fp" id="radio2">Nequi <br>
+                <input type="radio" name="fp" id="radio3">Tarjeta Credito</th>
+            <th>SubTotal</th><td><input type="text" id="subt" size="25"></td></tr>
+            <tr>
+                <th colspan="4" rowspan="3">Observaciones: Revise su pedido entregado y gracias por su compra</th>
+                <th>IVA</th><td><input type="text" id="iva" size="25"></td>
+            </tr>
+            <tr><th>Descuento</th><td><input type="text" id="desc" size="25"></td></tr>
+            <tr><th>Neto</th><td><input type="text" id="neto" size="25"></td></tr>
+            <tr><th colspan="2"><input type="button" value="CALCULAR PAGO" onclick="mostrar();"></th>
+            <th colspan="2"><input type="reset" value="BORRAR"></th>
+        <th colspan="2"><input type="button" value="ENVIAR" onclick="enviar();"></th></tr>
+        </table>
+    </form>
+</center>
+<script src="./js/Formulario Avanzado.js"></script>
+
+</body>
+</html>
